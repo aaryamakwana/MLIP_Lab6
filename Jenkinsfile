@@ -18,12 +18,16 @@ pipeline {
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
                 # Assuming the virtual environment is located at ~/mlip, adjust the path as necessary
-                source /mlip/bin/activate
+                echo 'Activating virtual environment...'
+                source /path/to/mlip/bin/activate
 
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
                 
-                # Now, running pytest within the activated environment
+                echo 'Ensuring pytest is installed...'
+                pip install pytest
+
+                echo 'Running pytest...'
                 pytest
 
                 echo 'pytest not runned'
@@ -34,7 +38,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'In this step, we deploy our porject'
+                echo 'In this step, we deploy our project'
                 echo 'Depending on the context, we may publish the project artifact or upload pickle files'
             }
         }

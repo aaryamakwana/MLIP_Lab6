@@ -15,16 +15,13 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # TODO fill out the path to conda here
-                # sudo /PATH/TO/CONDA init
-                # Assuming the virtual environment is located at ~/mlip, adjust the path as necessary
-                source /Users/aaryamakwana/MLIP/mlip/activate
+                # TODO fill out the path to conda hwherere
+                sudo /Users/aaryamakwana/anaconda3/bin/conda init
+                
                 
                 # TODO Complete the command to run pytest
-                # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+                sudo /PATH/TO/CONDA run -n idlf23 pytest
                 
-                # Now, running pytest within the activated environment
-                pytest /Users/aaryamakwana/MLIP/MLIP_Lab6
 
                 echo 'pytest not runned'
                 # exit 1 #comment this line after implementing Jenkinsfile

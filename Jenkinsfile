@@ -18,7 +18,7 @@ pipeline {
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
                 # Assuming the virtual environment is located at ~/mlip, adjust the path as necessary
-                source ~/mlip/bin/activate
+                source /mlip/bin/activate
 
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
